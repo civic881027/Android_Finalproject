@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="566dp"
+        android:layout_gravity="top">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_location"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="163dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_Longitude"
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="Longitude"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_Latitude"
+            android:layout_width="126dp"
+            android:layout_height="46dp"
+            android:layout_toRightOf="@+id/edit_Longitude"
+            android:gravity="center"
+            android:text="Latitude"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_Name"
+            android:layout_width="126dp"
+            android:layout_height="46dp"
+            android:layout_below="@+id/tv_Longitude"
+            android:gravity="center"
+            android:text="Name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/edit_Longitude"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_Longitude"></EditText>
+
+        <EditText
+            android:id="@+id/edit_Latitude"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_Latitude"></EditText>
+
+        <EditText
+            android:id="@+id/edit_Name"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_Longitude"
+            android:layout_toRightOf="@+id/tv_Name"></EditText>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:onClick="addToLocationList"
+            android:text="ADD" />
+    </FrameLayout>
+</FrameLayout>
